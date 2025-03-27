@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+</head>
+<body>
+
+    
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg " id="navbar">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="index.html" id="logo"><img src="logo...png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><img src="./images/menu.png" alt="menu" width="30px"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <!-- "Product" link: Click karne se product.html page open hoga -->
+               <div class="product-dropdown" style="display: flex; ">
+              <a class="nav-link" href="product.html" id="navbarProduct">Product</a>
+              <!-- Mobile-only dropdown toggle button -->
+              <button type="button" class="dropdown-toggle-btn" id="mobileDropdownToggle" style="background-color: transparent; color: white; display: flex; border: none; margin-top: 10px;" ><i class="fa-solid fa-caret-down"></i></button></div>
+              <ul class="dropdown-menu" aria-labelledby="navbarProduct" style="background-color: black;">
+                <li><a class="dropdown-item" href="allmixer.html">Mixer Grinder</a></li>
+                <li><a class="dropdown-item" href="allnutri.html">Nutri Blender</a></li>
+                <li><a class="dropdown-item" href="allkettle.html">Kettle</a></li>
+                <li><a class="dropdown-item" href="alliron.html">Dry Iron</a></li>
+                <li><a class="dropdown-item" href="allelectric.html">Electric Induction</a></li>
+              </ul>
+            </li>
+            
+            
+            
+    
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <div id="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-item-count"></span>
+              </div>
+            </li>
+            <li class="nav-item" >
+              <div id="user-icon" >
+                <a  href="login.html"><i class="fa-solid fa-user"></i></a>
+               
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- navbar -->
+    
+
+
+
+
+     <!-- add-to-cart -->
+     <div class="cart">
+      <h2 class="cart-title">Your cart</h2>
+      <div class="cart-content">
+        
+     </div>
+     <div class="total">
+      <div class="total-title">Total</div>
+        <div class="total-price">Rs.0</div>
+      </div>
+      <button class="btn-buy">Buy Now</button>
+      <i class="fa-solid fa-xmark" id="cart-close"></i>
+     </div>
+      <!-- add-to-cart -->
+
+
+
+    
+    <img src="./images/contact.jpg" alt="banner contact" style="width: 100%; height: 400px;">
+    <div class="container-fluid" id="contact">
+      <h4>Contact Us</h4>
+      <p>Your Everlong products deserve the best care, which is why we've created a dedicated section just for them. Simply click the care icon anywhere on our website, and we’ll be happy to assist you in any way we can.  
+      
+        For anything else—whether it's trade inquiries, career opportunities, corporate information, investment interests, or sharing your ideas and feedback—you can reach us at:</p>
+        
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-phone"> Phone</i>
+                    <h6>+918588888572</h6>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-envelope"> Email</i>
+                    <h6>info@everlong.in</h6>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card">
+                    <i class="fas fa-location-dot"> Address</i>
+                    <h6>48/24, Industrial Area Anand Parbat, Delhi</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4 py-3 py-md-0">
+              <label for="Name">Name</label>
+                <input type="text" id="Name" class="form-control form-control" required>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+              <label for="Email">Email</label>
+                <input type="text" id="Email" class="form-control form-control"  required>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+              <label for="Phone">Phone</label>
+                <input type="text" id="Phone" class="form-control form-control"  required>
+            </div>
+            <div class="form-group" style="margin-top: 30px;">
+                <textarea class="form-control" id="" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="messagebtn text-center"><button type="submit" onclick="openPopup()" >Submit</button></div>
+            
+        </div>
+        <div class="popup" id="popup">
+          <i class="fa-solid fa-check"></i>
+          <h2>Thank You!</h2>
+          <p>Your details has been submitted successfully. Thanks!</p>
+          <button type="button" onclick="closePopup()">Ok</button>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row" style="  margin-top: 5%; ">
+        <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:500px;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=TRIPATHI+ASSOCIATES++Add:-+48/24+street+no.9+Main+Gadodia+Road++Anand+Parvat+New+Delhi+110005+Landmark+SBI+ATM&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embedded-map-code" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a><style>#display-google-map img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+      </div>
+    </div>
+
+  
+
+
+
+    
+    <!-- newslater -->
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To The EverLong For Latest Upload.</h3>
+      <div class="input text-center">
+        <label for="email" class="sub_label" >Enter Your Email</label>
+        <br>
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+    <!-- newslater -->
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-top">
+       
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <img src="logo...png" alt="logo">
+              <p>
+                New Delhi <br>
+                Haryana <br>
+               
+              </p>
+              <strong>Phone:</strong> +918588888572 <br>
+              <strong>Email:</strong>info@everlong.in <br>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              
+             <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="terms.html">Terms of service</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+             </ul>
+            </div>
+
+
+
+           
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              
+
+             <ul>
+              <li><a href="allmixer.html">Mixer Grinder</a></li>
+            <li><a href="allnutri.html">Nutri Blender</a></li>
+            <li><a href="alliron.html">Dry Iron</a></li>
+            <li><a href="allkettle.html">Kettle</a></li>
+            <li><a href="allelectric.html">Electric Induction</a></li>
+             </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              
+
+              <div class="socail-links mt-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            
+            </div>
+
+          </div>
+          <!-- offer -->
+<div class="container-fluid" id="offer">
+  <div class="row">
+    <div class="col-md-3 py-3 py-md-0">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h3>Free Shipping</h3>
+      <p>On order over Rs.2500</p>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <i class="fa-solid fa-rotate-left"></i>
+      <h3>Free Replacement</h3>
+      <p>Within 7 days</p>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <i class="fa-solid fa-truck"></i>
+      <h3>Fast Delivery</h3>
+      <p>World Wide</p>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <i class="fa-solid fa-thumbs-up"></i>
+      <h3>Big choice</h3>
+      <p>Of products</p>
+    </div>
+  </div>
+</div>
+<!-- offer -->
+
+        </div>
+      </div>
+      <hr>
+      <div class="container-fluid py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>EverLong</span></strong>. All Rights Reserved
+        </div>
+       
+      </div>
+    </footer>
+    <!-- footer -->
+
+
+
+
+
+
+
+    <a href="#" class="arrow"><i><img src="./images/arrow.png" alt="logo"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
