@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- bootstrap links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap links -->
+  <!-- fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <!-- fonts links -->
+  <style>
+    /* Styling */
+    .container {
+      width: 600px;
+      margin: 50px auto;
+    }
+
+    .card {
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+      /* Hide forms by default */
+    }
+
+    .card.active {
+      display: block;
+      /* Show the active form */
+    }
+
+    .btn-custom {
+      width: 100%;
+    }
+
+    .form-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .form-link a {
+      color: #007bff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .form-link a:hover {
+      text-decoration: underline;
+    }
+
+    .message {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+     @media screen and (max-width:750px) {
+      .container{
+        width: 350px;
+      margin: 50px auto;
+      }
+     } 
+  </style>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg " id="navbar">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="index.html" id="logo"><img src="logo...png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="./images/menu.png" alt="" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <!-- "Product" link: Click karne se product.html page open hoga -->
+             <div class="product-dropdown" style="display: flex; ">
+            <a class="nav-link" href="product.html" id="navbarProduct">Product</a>
+            <!-- Mobile-only dropdown toggle button -->
+            <button type="button" class="dropdown-toggle-btn" id="mobileDropdownToggle" style="background-color: transparent; color: white; display: flex; border: none; margin-top: 10px;" ><i class="fa-solid fa-caret-down"></i></button></div>
+            <ul class="dropdown-menu" aria-labelledby="navbarProduct" style="background-color: black;">
+              <li><a class="dropdown-item" href="allmixer.html">Mixer Grinder</a></li>
+              <li><a class="dropdown-item" href="allnutri.html">Nutri Blender</a></li>
+              <li><a class="dropdown-item" href="allkettle.html">Kettle</a></li>
+              <li><a class="dropdown-item" href="alliron.html">Dry Iron</a></li>
+              <li><a class="dropdown-item" href="allelectric.html">Electric Induction</a></li>
+            </ul>
+          </li>
+          
+          
+          
+  
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div id="cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-item-count"></span>
+            </div>
+          </li>
+          <li class="nav-item" >
+            <div id="user-icon" >
+              <a  href="login.html"><i class="fa-solid fa-user"></i></a>
+             
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar -->
+
+
+
+  <!-- add-to-cart -->
+  <div class="cart">
+    <h2 class="cart-title">Your cart</h2>
+    <div class="cart-content">
+      
+    </div>
+    <div class="total">
+      <div class="total-title">Total</div>
+      <div class="total-price">Rs.0</div>
+    </div>
+    <button class="btn-buy">Buy Now</button>
+    <i class="fa-solid fa-xmark" id="cart-close"></i>
+  </div>
+ 
+
+  <div class="container">
+
+    <!-- Login Form -->
+    <div id="loginForm" class="card active">
+      <h3 class="text-center">Login</h3>
+      <form id="loginPageForm">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <div id="loginMessage" class="message"></div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary btn-custom" style="background-color: red; border: none; margin-left: 0%;">Log
+            In</button>
+        </div>
+      </form>
+
+      <div class="form-link">
+        <p><a onclick="showForm('registerForm')">Register</a></p>
+        <p><a onclick="showForm('forgotPasswordForm')">Forgot Password?</a></p>
+      </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div id="registerForm" class="card">
+      <h3 class="text-center">Register</h3>
+      <form id="registrationPageForm">
+        <div class="mb-3">
+          <label for="regUsername" class="form-label">Username</label>
+          <input type="text" class="form-control" id="regUsername" placeholder="Enter a username" required>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" placeholder="Create a password" required>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+        </div>
+        <div id="registrationMessage" class="message"></div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary btn-custom"
+            style="background-color: red; border: none;">Register</button>
+        </div>
+      </form>
+      <div class="form-link">
+        <p><a onclick="showForm('loginForm')">Back to Login</a></p>
+      </div>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div id="forgotPasswordForm" class="card">
+      <h3 class="text-center">Forgot Password</h3>
+      <form id="forgotPasswordPageForm">
+        <div class="mb-3">
+          <label for="forgotUsername" class="form-label">Enter your username</label>
+          <input type="text" class="form-control" id="forgotUsername" placeholder="Enter your username" required>
+        </div>
+        <div id="forgotMessage" class="message"></div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary btn-custom"
+            style="background-color: red; border: none;">Submit</button>
+        </div>
+      </form>
+      <div class="form-link">
+        <p><a onclick="showForm('loginForm')">Back to Login</a></p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- newslater -->
+  <div class="container" id="newslater">
+    <h3 class="text-center">Subscribe To The EverLong For Latest Upload.</h3>
+    <div class="input text-center">
+      <label for="email" class="sub_label" >Enter Your Email</label>
+      <br>
+      <input type="text" placeholder="Enter Your Email..">
+      <button id="subscribe">SUBSCRIBE</button>
+    </div>
+  </div>
+  <!-- newslater -->
+
+
+
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer-top">
+     
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <img src="logo...png" alt="logo">
+            <p>
+              New Delhi<br>
+              Haryana<br>
+
+            </p>
+            <strong>Phone:</strong>+918588888572<br>
+            <strong>Email:</strong> info@everlong.in<br>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="terms.html">Terms of service</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+
+
+
+          <div class="col-lg-3 col-md-6 footer-links">
+
+
+            <ul>
+              <li><a href="allmixer.html">Mixer Grinder</a></li>
+              <li><a href="allnutri.html">Nutri Blender</a></li>
+              <li><a href="alliron.html">Dry Iron</a></li>
+              <li><a href="allkettle.html">Kettle</a></li>
+              <li><a href="allelectric.html">Electric Induction</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+
+
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/everlongglobalfinds?igsh=OWlsYXFhdTczNnFk" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-skype"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- offer -->
+        <div class="container-fluid" id="offer">
+          <div class="row">
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <h3>Free Shipping</h3>
+              <p>On order over Rs.2500</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-rotate-left"></i>
+              <h3>Free Replacement</h3>
+              <p>Within 7 days</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-truck"></i>
+              <h3>Fast Delivery</h3>
+              <p>World Wide</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Big choice</h3>
+              <p>Of products</p>
+            </div>
+          </div>
+        </div>
+        <!-- offer -->
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EverLong Global Finds</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer>
+  <!-- footer -->
+
+
+
+
+
+
+
+  <a href="#" class="arrow"><i><img src="./images/arrow.png" alt="arrow"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+ 
+
+
+
+  <script>
+    // Navigation between forms
+    function showForm(formId) {
+      document.querySelectorAll('.card').forEach(form => {
+        form.classList.remove('active');
+      });
+      document.getElementById(formId).classList.add('active');
+    }
+
+    // Registration Form Submission
+    document.getElementById("registrationPageForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("regUsername").value;
+      const password = document.getElementById("regPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const messageDiv = document.getElementById("registrationMessage");
+
+      const usernamePattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+      const passwordPattern = /^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}$/;
+
+      if (!usernamePattern.test(username)) {
+        messageDiv.textContent = "Username must contain at least 8 characters, one uppercase letter, one special character, and one number.";
+        messageDiv.className = "message error";
+        return;
+      }
+
+      if (!passwordPattern.test(password)) {
+        messageDiv.textContent = "Password must contain at least 6 characters, one uppercase letter, and one special character.";
+        messageDiv.className = "message error";
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        messageDiv.textContent = "Passwords do not match.";
+        messageDiv.className = "message error";
+        return;
+      }
+
+      // Store user credentials
+      localStorage.setItem(username, password);
+      messageDiv.textContent = "Registration successful!";
+      messageDiv.className = "message success";
+    });
+
+    // Login Form Submission
+    document.getElementById("loginPageForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const messageDiv = document.getElementById("loginMessage");
+
+      if (localStorage.getItem(username) === password) {
+        messageDiv.textContent = "Login successful!";
+        messageDiv.className = "message success";
+      } else {
+        messageDiv.textContent = "Invalid username or password.";
+        messageDiv.className = "message error";
+      }
+    });
+
+    // Forgot Password Form Submission
+    document.getElementById("forgotPasswordPageForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("forgotUsername").value;
+      const messageDiv = document.getElementById("forgotMessage");
+
+      const storedPassword = localStorage.getItem(username);
+
+      if (storedPassword) {
+        messageDiv.textContent = `Your password is: ${storedPassword}`;
+        messageDiv.className = "message success";
+      } else {
+        messageDiv.textContent = "Username not found.";
+        messageDiv.className = "message error";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
