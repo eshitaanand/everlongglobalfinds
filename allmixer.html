@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- AOS Animation link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- bootstrap links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap links -->
+  <!-- fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <!-- fonts links -->
+
+</head>
+
+<body onload="slider()">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg " id="navbar">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="index.html" id="logo"><img src="logo...png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="./images/menu.png" alt="menu" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <!-- "Product" link: Click karne se product.html page open hoga -->
+             <div class="product-dropdown" style="display: flex; ">
+            <a class="nav-link" href="product.html" id="navbarProduct">Product</a>
+            <!-- Mobile-only dropdown toggle button -->
+            <button type="button" class="dropdown-toggle-btn" id="mobileDropdownToggle" style="background-color: transparent; color: white; display: flex; border: none; margin-top: 10px;" ><i class="fa-solid fa-caret-down"></i></button></div>
+            <ul class="dropdown-menu" aria-labelledby="navbarProduct" style="background-color: black;">
+              <li><a class="dropdown-item" href="allmixer.html">Mixer Grinder</a></li>
+              <li><a class="dropdown-item" href="allnutri.html">Nutri Blender</a></li>
+              <li><a class="dropdown-item" href="allkettle.html">Kettle</a></li>
+              <li><a class="dropdown-item" href="alliron.html">Dry Iron</a></li>
+              <li><a class="dropdown-item" href="allelectric.html">Electric Induction</a></li>
+            </ul>
+          </li>
+          
+          
+          
+  
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div id="cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-item-count"></span>
+            </div>
+          </li>
+          <li class="nav-item" >
+            <div id="user-icon" >
+              <a  href="login.html"><i class="fa-solid fa-user"></i></a>
+             
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- navbar -->
+
+
+
+
+
+  <!-- add-to-cart -->
+  <div class="cart">
+    <h2 class="cart-title">Your cart</h2>
+    <div class="cart-content">
+
+    </div>
+    <div class="total">
+      <div class="total-title">Total</div>
+      <div class="total-price">Rs.0</div>
+    </div>
+    <button class="btn-buy">Buy Now</button>
+    <i class="fa-solid fa-xmark" id="cart-close"></i>
+  </div>
+  <!-- add-to-cart -->
+
+
+
+
+  <!-- banner -->
+  <section class="mixer-banner">
+
+    <div class="mixer-content">
+      <h1> <span>Mixer Grinder</span>
+        <br>
+        Up To <span id="span2">50%</span> Off
+      </h1>
+
+      <div class="btn"><button onclick="window.location.href='mixer2jar.html'">Shop Now</button></div>
+
+    </div>
+    <img src="./images/WhatsApp Image 2025-03-11 at 12.16.53.jpeg" alt="banner">
+  </section>
+  <!-- banner -->
+
+
+
+
+  <section id="product1" class="section-p1">
+    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="1000">PRODUCTS</h2>
+    <hr style="color: grey;" data-aos="fade-up" data-aos-duration="1000">
+    <p data-aos="fade-up" data-aos-duration="1000">All the new products</p>
+
+    <div class="container-fluid">
+
+      <div class="pro-container" data-aos="fade-up" data-aos-duration="1000">
+      
+        <div class="pro">
+          <img src="./images/WhatsApp Image 2025-02-19 at 12.18.07-Photoroom.png" alt="mixer 2 jar"
+            onclick="window.location.href='mixer2jar.html'">
+          <img src="./images/2jarhover.jpg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixer2jar.html'">
+          <div class="des">
+            <span>EverLong</span>
+            <h5>Mixer Grinder|2 Jar 500W</h5>
+            <p>This 500-watt mixer grinder comes with two versatile jars: a grinding jar, and a
+              chutney jar.</p>
+
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <h4>Rs.2,150/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+        <div class="pro">
+          <img src="./images/17-Photoroom.png" alt="mixer"
+            onclick="window.location.href='mixergrind.html'">
+          <img src="./images/WhatsApp Image 2025-03-19 at 14.48.04.jpeg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixergrind.html'">
+
+          <div class="des">
+            <span>EverLong</span>
+            <h5>Mixer Grinder| 3 Jar 500W</h5>
+            <p>This 500-watt mixer grinder comes with three versatile jars: a liquidizing jar, a grinding jar, and a
+              chutney jar.</p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>Rs.2,150/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+        <div class="pro">
+          <img src="./images/mixercombo2jar-removebg-preview.png" alt="mixercombo"
+            onclick="window.location.href='mixercombo2jar.html'">
+          <img src="./images/2jarhover.jpg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixercombo2jar.html'">
+          <div class="des">
+            <span>EverLong</span>
+            <h5>500W Mixer Grinder 2 Jar & 750W Dry Iron Combo</h5>
+            <p>Enjoy efficient cooking and laundry with this Mixer Grinder + 2 Dry Irons combo, designed to simplify your daily tasks effortlessly.</p>
+
+            <div class="star">
+              <i class="fas fa-star"></i> 
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <h4>Rs.2100/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+        <div class="pro">
+          <img src="./images/mixerkettlecombo2jar-removebg-preview.png" alt="mixerkettlecombo2jar"
+            onclick="window.location.href='mixerkettlecombo2jar.html'">
+          <img src="./images/2jarhover.jpg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixerkettlecombo2jar.html'">
+          <div class="des">
+            <span>EverLong</span>
+            <h5>500W Mixer Grinder 2 Jar & 750W Dry Iron Combo</h5>
+            <p>Enjoy efficient cooking and laundry with this Mixer Grinder + 2 Dry Irons combo, designed to simplify your daily tasks effortlessly.</p>
+
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <h4>Rs.2100/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+        <div class="pro">
+          <img src="./images/WhatsApp Image 2025-03-07 at 17.06.39.jpeg" alt="mixer4jar"
+            onclick="window.location.href='mixer4jar.html'">
+          <img src="./images/WhatsApp Image 2025-03-08 at 12.38.20.jpeg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixer4jar.html'">
+          <div class="des">
+            <span>EverLong</span>
+            <h5>Mixer Grinder| 4 Jar 500W</h5>
+            <p>This 500-watt mixer grinder comes with four versatile jars: a liquidizing jar, a grinding jar, a chutney
+              jar, and an additional 4th jar for multi-purpose use.</p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>Rs.2,150/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+        <div class="pro">
+          <img src="./images/mixercombo-removebg-preview.png" alt="mixercombo3jar" onclick="window.location.href='mixercombo3jar.html'">
+          <img src="./images/WhatsApp Image 2025-03-19 at 14.48.04.jpeg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixercombo3jar.html'">
+          <div class="des">
+            <span>EverLong</span>
+            <h5>500W Mixer Grinder 3 Jar & 750W Dry Iron Combo</h5>
+            <p>Effortlessly simplify your kitchen and laundry tasks with the Everlong Mixer Grinder (3 Jars) + Dry Iron combo..</p>
+
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <h4>Rs.2100/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+        <div class="pro">
+          <img src="./images/mixercombo4jar-removebg-preview.png" alt="mixercombo4jar"
+            onclick="window.location.href='mixercombo4jar.html'">
+          <img src="./images/WhatsApp Image 2025-03-08 at 12.38.20.jpeg" alt="rear product image" class="rear-img"
+            onclick="window.location.href='mixercombo4jar.html'">
+          <div class="des">
+            <span>EverLong</span>
+            <h5>500W Mixer Grinder 4 Jar & 750W Dry Iron Combo</h5>
+            <p>Effortlessly simplify your kitchen and laundry tasks with the Everlong Mixer Grinder (4 Jars) + Dry Iron combo..</p>
+
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <h4>Rs.2100/-</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping add-cart"></i></a>
+        </div>
+      </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- newslater -->
+  <div class="container" id="newslater">
+    <h3 class="text-center">Subscribe To The EverLong For Latest Upload.</h3>
+    <div class="input text-center">
+      <label for="email" class="sub_label" >Enter Your Email</label>
+      <br>
+      <input type="text" placeholder="Enter Your Email..">
+      <button id="subscribe">SUBSCRIBE</button>
+    </div>
+  </div>
+  <!-- newslater -->
+
+
+
+
+
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <img src="logo...png" alt="logo">
+            <p>
+              New Delhi <br>
+              Haryana<br>
+            </p>
+            <strong>Phone:</strong>+918588888572<br>
+            <strong>Email:</strong> info@everlong.in<br>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="terms.html">Terms of service</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+
+
+          <div class="col-lg-3 col-md-6 footer-links">
+
+            <ul>
+
+              <li><a href="allmixer.html">Mixer Grinder</a></li>
+              <li><a href="allnutri.html">Nutri Blender</a></li>
+              <li><a href="alliron.html">Dry Iron</a></li>
+              <li><a href="allkettle.html">Kettle</a></li>
+              <li><a href="allelectric.html">Electric Induction</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+
+
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/everlongglobalfinds?igsh=OWlsYXFhdTczNnFk" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-skype"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- offer -->
+        <div class="container-fluid" id="offer">
+          <div class="row">
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <h3>Free Shipping</h3>
+              <p>On order over Rs.2500</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-rotate-left"></i>
+              <h3>Free Replacement</h3>
+              <p>Within 7 days</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-truck"></i>
+              <h3>Fast Delivery</h3>
+              <p>World Wide</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+              <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Big choice</h3>
+              <p>Of products</p>
+            </div>
+          </div>
+        </div>
+        <!-- offer -->
+
+
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EverLong Global Finds</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer>
+  <!-- footer -->
+
+
+
+  <!-- AOS Animation link -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+  <a href="#" class="arrow"><i><img src="./images/arrow.png" alt="arrow"></i></a>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
